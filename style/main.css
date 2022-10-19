@@ -1,0 +1,107 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #e9e7e7;
+}
+
+.section-form {
+    background-color: #d0e7d0;
+    width: 310px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px #62a562;
+}
+
+img {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px auto 5px;
+}
+
+ input  {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: solid 1px rgb(1, 83, 19);
+ }
+
+ input[type="number"]{
+    font-weight: bold;
+    font-size: 25px;
+ }
+
+button {
+    display: block;
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    background-color: rgb(6, 100, 45);
+    width: 100%;
+    margin: 15px auto 0px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+.section-numbers{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.numbers {
+    display: flex;
+    width: 240px;
+    flex-wrap: wrap;
+    margin: 25px auto 0px;
+}
+
+.numbers div {
+    color: rgb(9, 51, 99);
+    border: solid 1px rgb(16, 69, 119);
+    background-color: rgb(234, 237, 255);
+    width: 80px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers div:hover {
+    cursor: pointer;
+}
+
+.eliminar {
+    width: 26px;
+}
+
+.borrar {
+    width: 37px;
+}
+
+
+.hide {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    z-index: -10;
+    visibility: hidden;
+}

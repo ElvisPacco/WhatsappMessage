@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MensajesWhatsapp</title>
+    <link rel="icon" href="/images/whatsapp.png">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/css/all.css">
+</head>
+<body>
+    <div>
+        <main>
+
+        </main>
+            <section class="section-form">
+                <img src="./images/whatsapp_online.jpg" alt="">
+                <div class="form">
+                    <label for="celular">Celular:</label>
+                    <input id="celular" type="number">
+                    <label for="mensaje">Mensaje:</label>
+                    <input id="mensaje" type="text" value="Buenas noches">
+                    <button href="wa.me/" onclick="CrearEnlace()">Continuar</button>
+                </div>
+            </section>
+            <section class="section-numbers">
+                <div class="numbers">
+                    <div onclick="read(1)">1</div>
+                    <div onclick="read(2)">2</div>
+                    <div onclick="read(3)">3</div>
+                    <div onclick="read(4)">4</div>
+                    <div onclick="read(5)">5</div>
+                    <div onclick="read(6)">6</div>
+                    <div onclick="read(7)">7</div>
+                    <div onclick="read(8)">8</div>
+                    <div onclick="read(9)">9</div>
+                    <div>
+                        <img class="eliminar" src="./images/eliminar.png"  onclick="eliminar()">
+                    </div>
+                    <div onclick="read(0)">0</div>
+                    <div>
+                        <img class="borrar" src="./images/borrar.png" onclick="borrar()">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section class="hide">
+        <form>
+        <input type="text" class="txt" value="0">
+        <div>
+          <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+          <div class="rate-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+          <div class="pitch-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <select>
+
+        </select>
+        <div class="controls">
+          <button id="play" type="submit">Play</button>
+        </div>
+        </form>
+    </section>
+
+    <script type="text/javascript">
+        date = new Date();
+        hora = date.getHours();
+        if(hora < 12){
+            saludo = "Buenos días";
+        }
+        else{
+            if(hora < 19) {
+                saludo = "Buenas tardes";
+            }
+            else{
+                saludo = "Buenas noches";
+            }
+        }
+        document.getElementById("mensaje").value = saludo
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
