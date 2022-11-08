@@ -87,10 +87,21 @@ voiceSelect.onchange = function(){
   speak();
 }
 
+function speakNumber (num){
+  const synth = window.speechSynthesis
+      const utterThis = new SpeechSynthesisUtterance(num)
+      utterThis.voice = voices[2];
+      utterThis.rate = 1;
+      utterThis.lang = 'es-ES';
+      synth.speak(utterThis);
+}
+
 function read(k){
   cel = document.getElementById('celular');
   cel.value = cel.value + k;
+  //No se escuchará 
   //speak(k);
+  speakNumber(k);
 }
 
 function eliminar() {
@@ -108,5 +119,17 @@ function CrearEnlace(){
   cel = document.getElementById('celular').value;
   men = document.getElementById('mensaje').value;
   //men = "Hola.%0ATe saludo." //Salto de línea %0A, Espacio %20
-  window.open("https://wa.me/51" + cel + "?text=" + men)
+  if(cel.length == 9){
+    window.open("https://wa.me/51" + cel + "?text=" + men)
+  }
+  else {
+    if (cel.length > 9) {
+      window.open("https://wa.me/" + cel + "?text=" + men)
+    }
+    else {
+      if (confirm ("Posiblemente falte números. Para omitir este mensaje presione ACEPTAR.")) {
+        window.open("https://wa.me/51" + cel + "?text=" + men)
+      }
+    }
+  }
 }

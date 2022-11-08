@@ -13,7 +13,7 @@
     <div>
         <main>
             <section class="section-form">
-                <a class="alternative" href="./index2.html"></a>
+                <a class="alternative color-white" href="./index.html"></a>
                 <img src="./images/whatsapp_online.jpg" alt="">
                 <div class="form">
                     <label for="celular">Celular:</label>
@@ -46,6 +46,28 @@
         </main>
     </div>
 
+    <section class="hide">
+        <form>
+        <input type="text" class="txt" value="0">
+        <div>
+          <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+          <div class="rate-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+          <div class="pitch-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <select>
+
+        </select>
+        <div class="controls">
+          <button id="play" type="submit">Play</button>
+        </div>
+        </form>
+    </section>
+
     <script type="text/javascript">
         date = new Date();
         hora = date.getHours();
@@ -62,6 +84,6 @@
         }
         document.getElementById("mensaje").value = saludo
     </script>
-    <script src="main.js"></script>   
+    <script src="script.js"></script>  
 </body>
 </html>
