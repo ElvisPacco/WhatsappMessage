@@ -44,17 +44,26 @@ img {
 }
 
 input,
-button {
+button,
+textarea {
     outline: 0;
 }
 
- input  {
+ input,
+ textarea  {
     font-size: 20px;
     padding: 9px;
     text-align: center;
     margin: 8px 0px;
     border-radius: 5px;
     border: solid 1px #015313;
+ }
+
+ textarea {
+    font-family: inherit;
+    font-size: 12.5px;
+    text-align: left;
+    resize: vertical;
  }
 
  input:focus {

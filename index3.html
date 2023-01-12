@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +13,15 @@
     <div>
         <main>
             <section class="section-form">
-                <a class="alternative color-white" href="./index.html"></a>
+                <a class="alternative" href="./index2.html"></a>
                 <img src="./images/whatsapp_online.jpg" alt="">
                 <div class="form">
                     <label for="celular">Celular:</label>
                     <input id="celular" type="number">
                     <label for="mensaje">Mensaje:</label>
-                    <input id="mensaje" type="text" value="Buenas noches">
+                    <textarea id="mensaje" type="text" value="Buenas noches"  rows="10"></textarea>                    
                     <button href="wa.me/" onclick="CrearEnlace()">Continuar</button>
+                    <button href="" onclick="CrearConcatenar()">Generar CONCATENAR</button>
                 </div>
             </section>
             <section class="section-numbers">
@@ -46,28 +47,6 @@
         </main>
     </div>
 
-    <section class="hide">
-        <form>
-        <input type="text" class="txt" value="0">
-        <div>
-          <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
-          <div class="rate-value">1</div>
-          <div class="clearfix"></div>
-        </div>
-        <div>
-          <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
-          <div class="pitch-value">1</div>
-          <div class="clearfix"></div>
-        </div>
-        <select>
-
-        </select>
-        <div class="controls">
-          <button id="play" type="submit">Play</button>
-        </div>
-        </form>
-    </section>
-
     <script type="text/javascript">
         date = new Date();
         hora = date.getHours();
@@ -82,8 +61,8 @@
                 saludo = "Buenas noches";
             }
         }
-        document.getElementById("mensaje").value = saludo
+        document.getElementById("mensaje").value = saludo;
     </script>
-    <script src="script.js"></script>  
+    <script src="main3.js"></script>   
 </body>
 </html>
