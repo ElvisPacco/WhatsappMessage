@@ -122,15 +122,15 @@ function CrearEnlace(){
   //men = "Hola.%0ATe saludo." //Salto de línea %0A, Espacio %20
 
   if(cel.length == 9){
-    window.open("https://wa.me/51" + cel + "?text=" + men)
+    window.open("https://api.whatsapp.com/send?phone=51" + cel + "?text=" + men)
   }
   else {
     if (cel.length > 9) {
-      window.open("https://wa.me/" + cel + "?text=" + men)
+      window.open("https://api.whatsapp.com/send?phone=" + cel + "?text=" + men)
     }
     else {
       if (confirm ("Posiblemente falte números. Para omitir este mensaje presione ACEPTAR.")) {
-        window.open("https://wa.me/51" + cel + "?text=" + men)
+        window.open("https://api.whatsapp.com/send?phone=51" + cel + "?text=" + men)
       }
     }
   }
@@ -143,21 +143,19 @@ function CrearConcatenar(){
     //men = "Hola.%0ATe saludo." //Salto de línea %0A, Espacio %20
   
     if(cel.length == 9){
-      concat = "https://wa.me/51[CELDA_CELULAR]?text=" + men
+      concat = "https://api.whatsapp.com/send?phone=51[CELDA_CELULAR]?text=" + men
     }
     else {
       if (cel.length > 9) {
-        concat = "https://wa.me/[CELDA_CELULAR]?text=" + men
+        concat = "https://api.whatsapp.com/send?phone=[CELDA_CELULAR]?text=" + men
       }
       else {
         if (confirm ("Posiblemente falte números. Para omitir este mensaje presione ACEPTAR.")) {
-            concat = "https://wa.me/51[CELDA_CELULAR]?text=" + men
+            concat = "https://api.whatsapp.com/send?phone=51[CELDA_CELULAR]?text=" + men
         }
       }
     }
-    concat = '=CONCATENAR("' + concat + '")';
+    concat = '=HIPERVINCULO(CONCATENAR("' + concat + '"))';
     concat = concat.replaceAll('[','";').replaceAll(']',';"');
-    alert(concat);
-    concat.select();
-    document.execCommand('copy');
+    document.getElementById('concatenar').value = concat;   
   }

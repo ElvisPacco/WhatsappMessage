@@ -137,3 +137,24 @@ button:hover {
     z-index: -10;
     visibility: hidden;
 }
+
+#concatenar {
+    margin-top: 25px;
+    width: 270px;
+}
+
+.section-enlaces div{
+    padding: 20px 0px;
+    width: 270px;
+    margin: auto;
+}
+
+.section-enlaces p{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-enlaces a {
+    color: darkslategrey;
+}
+
