@@ -22,8 +22,12 @@
                     <textarea id="mensaje" type="text" value="Buenas noches"  rows="10"></textarea>
                     <div class="modoenvio">
                         Modo de uso:
-                        <input name="modo" type="radio" value="web" checked> Web
-                        <input name="modo" type="radio" value="desktop"> Desktop
+                        <label for="modo1">
+                            <input id="modo1" name="modo" type="radio" value="web" checked>Web
+                        </label>
+                        <label for="modo2">
+                            <input id="modo2" name="modo" type="radio" value="desktop">Desktop
+                        </label>
                     </div>                 
                     <button href="wa.me/" onclick="CrearEnlace()">Continuar</button>
                 </div>

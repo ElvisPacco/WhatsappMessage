@@ -173,8 +173,5 @@ button:hover {
 
 .modoenvio label {
     user-select: none;
-}
-
-.modoenvio input[type=radio] {
     margin-left: 9px;
 }
