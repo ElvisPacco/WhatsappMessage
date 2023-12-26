@@ -38,7 +38,8 @@ function CrearEnlace(){
   }
 }
 
-document.addEventListener('keydown', PresionarEnter);
+var inputCelular = document.getElementById('celular');
+inputCelular.addEventListener('keydown', PresionarEnter);
 function PresionarEnter(e){
   if (e.keyCode === 13) {
     e.preventDefault();

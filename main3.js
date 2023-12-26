@@ -72,7 +72,6 @@ function CrearConcatenar(){
   document.getElementById('concatenar').value = concat;   
 }
 
-document.addEventListener('keydown', PresionarEnter);
 function PresionarEnter(e){
   if (e.keyCode === 13) {
     e.preventDefault();
