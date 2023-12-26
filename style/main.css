@@ -170,3 +170,11 @@ button:hover {
     height: 10px;
     accent-color: #000000;
 }
+
+.modoenvio label {
+    user-select: none;
+}
+
+.modoenvio input[type=radio] {
+    margin-left: 9px;
+}
