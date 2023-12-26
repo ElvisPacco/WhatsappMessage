@@ -17,9 +17,14 @@
                 <img src="./images/whatsapp_online.jpg" alt="">
                 <div class="form">
                     <label for="celular">Celular:</label>
-                    <input id="celular" type="number">
+                    <input id="celular" type="number" onkeypress="PresionarEnter()" autofocus>
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" type="text" value="Buenas noches"  rows="10"></textarea>                    
+                    <textarea id="mensaje" type="text" value="Buenas noches"  rows="10"></textarea>
+                    <div class="modoenvio">
+                        Modo de uso:
+                        <input name="modo" type="radio" value="web" checked> Web
+                        <input name="modo" type="radio" value="desktop"> Desktop
+                    </div>                 
                     <button href="wa.me/" onclick="CrearEnlace()">Continuar</button>
                 </div>
             </section>

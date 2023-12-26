@@ -17,13 +17,18 @@
                 <img src="./images/whatsapp_online.jpg" alt="">
                 <div class="form">
                     <label for="celular">Celular:</label>
-                    <input id="celular" type="number">
+                    <input id="celular" type="number" onkeypress="PresionarEnter()" autofocus>
                     <label for="mensaje">Mensaje:</label>
                     <input id="mensaje" type="text" value="Buenas noches">
+                    <div class="modoenvio">
+                        Modo de uso:
+                        <input name="modo" type="radio" value="web" checked> Web
+                        <input name="modo" type="radio" value="desktop"> Desktop
+                    </div>
                     <button href="wa.me/" onclick="CrearEnlace()">Continuar</button>
                 </div>
             </section>
-            <section class="section-numbers">
+            <!--section class="section-numbers">
                 <div class="numbers">
                     <div onclick="read(1)">1</div>
                     <div onclick="read(2)">2</div>
@@ -42,7 +47,7 @@
                         <img class="borrar" src="./images/borrar.png" onclick="borrar()">
                     </div>
                 </div>
-            </section>
+            </section!-->
         </main>
     </div>
 
